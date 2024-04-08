@@ -14,10 +14,9 @@ public class ConsoleLogger extends NamedLogger {
         super(name);
     }
 
-    @Override
+
     public void log(String format, Object... args) {
-        String entry = String.format(format, args);
-        String message = String.format("%s\t%s\n", this.name, entry);
+        super.log(format, args);
         System.out.print(message);
     }
 }

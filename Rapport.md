@@ -15,11 +15,18 @@ Ce patron permet ici de calculer une propriété qui dépend de tous les éléme
 En modifiant le Set en List, nous n'avons pas non plus besoin de modifier la méthode getVelocity, car l'utilisation du pattern Itérateur nous permet d'accéder aux composants peu importe leur organisation dans la classe Vehicle.
 
 ## Exercice 3
-
+Pour réaliser ce patron de conception Singleton, on a créé un constructeur privé pour s'assurer que les classes extérieures ne puissent pas créer de Clock. Ensuite, nous avons ajouté une instance de Clock dans la classe elle-même, ainsi qu'une méthode get pour y accéder.
+La classe Wheel est également modifiée, car elle ne peut plus instancier la Clock désormais. Elle utilise maintenant le getter afin d'utiliser les fonctions de la Clock.
 
 ## Exercice 4
+Les fichiers Bike.java et Wheel.java sont localisés dans les dossiers cycling et transport respectivement, par conséquent, ils n'appartiennent pas au même paquetage. Il existe une dépendance cycliste entre les deux classes ... Les dépendances cycliques sont généralement à éviter, car elles peuvent rendre le code plus difficile à comprendre et peut entraîner des problèmes de maintenance et de test du code.
+
+La classe Wheel utilise la fonctionnalité getPush() pour récupérer la force exercée sur le Bike afin de calculer son accélération et du coup sa vitesse. Il y a une abstraction de la classe Bike qui est la classe abstraite Vehicle et qui isole la fonction getPush(). Cette abstraction est localisée dans le même paquetage de la classe Wheel.
+
+Pour casser cette dépendance cyclique, on va changer le type de référence de l'attribut drive de Bike a Vehicle dans la classe Wheel et on va enlever la ligne ' import fr.polytech.sim.cycling.Bike; ' de la classe Wheel.
 
 ## Exercice 5
+
 
 ## Exercice 6
 
@@ -28,5 +35,4 @@ En modifiant le Set en List, nous n'avons pas non plus besoin de modifier la mé
 ## Exercice 8
 
 ## Exercice 9
-
 
