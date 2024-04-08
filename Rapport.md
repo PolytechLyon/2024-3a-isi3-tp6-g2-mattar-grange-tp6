@@ -26,7 +26,8 @@ La classe Wheel utilise la fonctionnalité getPush() pour récupérer la force e
 Pour casser cette dépendance cyclique, on va changer le type de référence de l'attribut drive de Bike a Vehicle dans la classe Wheel et on va enlever la ligne ' import fr.polytech.sim.cycling.Bike; ' de la classe Wheel.
 
 ## Exercice 5
-
+On a simplement remonté le code redondant dans la classe mère NamedLogger en ajoutant un attribut public afin d'accéder au message.
+Les deux classes ConsoleLogger et FileLogger peuvent maintenant appeler la méthode super pour obtenir un message dans leur attribut hérité.
 
 ## Exercice 6
 

@@ -18,6 +18,7 @@ public class FileLogger extends NamedLogger {
         super(name);
     }
 
+    @Override
     synchronized public void log(String format, Object... args) {
         super.log(format, args);
         try (FileWriter fileWriter = new FileWriter(FILE_NAME, true)) {

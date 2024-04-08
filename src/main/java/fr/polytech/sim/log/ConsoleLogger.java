@@ -14,7 +14,7 @@ public class ConsoleLogger extends NamedLogger {
         super(name);
     }
 
-
+    @Override
     public void log(String format, Object... args) {
         super.log(format, args);
         System.out.print(message);
