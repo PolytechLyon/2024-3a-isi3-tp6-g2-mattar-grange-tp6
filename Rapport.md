@@ -30,10 +30,13 @@ On a simplement remonté le code redondant dans la classe mère NamedLogger en a
 Les deux classes ConsoleLogger et FileLogger peuvent maintenant appeler la méthode super pour obtenir un message dans leur attribut hérité.
 
 ## Exercice 6
+L'interface LoggerFactory permet de définir si l'on utilise un ConsoleLogger ou un FileLogger. Nous n'avons plus le choix et toutes les classes Wheel, BikeSimulator et Vehicle doivent utiliser le logger que nous définissons dans la factory.
+Cela centralise efficacement la création des loggers.
 
 ## Exercice 7
 
 ## Exercice 8
+COMMIT AVANT DE PASSER A LA Q9 /!\
 
 ## Exercice 9
 
