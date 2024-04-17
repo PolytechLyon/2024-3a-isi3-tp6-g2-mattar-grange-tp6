@@ -122,6 +122,8 @@ Pour utiliser la factory, on remplace simplement les appels aux constructeurs de
 Logger logger = LoggerFactory.CreateLogger("BikeSimulator");
 ```
 
+La différence avec le patron de conception singleton est que cette methode ne garanti pas qu'il n'y ai qu'une seule instance de la classe Logger.
+
 ## Exercice 7
 Pour appliquer le patron de conception décorateur à notre code, nous avons créé une classe abstraite LoggerDecorator qui implémente l'interface Logger. Cette classe abstraite contient un attribut logger de type Logger. La classe LoggerDecorator permet aux décorateurs concrets d'appeller simplement le méthode log() de logger, mais ajoutent une fonctionnalité supplémentaire, ici, le decorateur concret TimestampedLoggerDecorator ajoute l'heure au message.
 ```java
